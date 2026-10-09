@@ -1,0 +1,10 @@
+id = "kristal-hospitalops"
+version = "1.0.0"
+target_id = "HospitalOps"
+kind = "kristal"
+
+[source]
+root = "/path/to/Kristal-HospitalOps"
+
+[implementation]
+type = "kristal-hospitalops"

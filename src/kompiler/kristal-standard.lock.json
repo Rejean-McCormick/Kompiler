@@ -1,0 +1,34 @@
+{
+  "format": "kompiler.kristal-standard-lock/v3",
+  "standard": "Kristal",
+  "version": "10.0.0-draft.2",
+  "framework_commit": "27c0c7db3d79a4597c1c964fe8281fa35b5f858a",
+  "contract_set": "contracts/contract-set.json",
+  "contract_set_sha256": "929166240f65c25e4feb6d0346f69b9122d0df861365ec40128337a6462a2ad0",
+  "lock_strength": "exact-contract-set-pin",
+  "portable_contract": "kristal_state/6.0",
+  "semantic_baseline": "kristall/7.0",
+  "query_baseline": "kristall/8.0",
+  "state_architecture": "kristal.state/9.0",
+  "hosted_network": "kristal.hosting/10.0",
+  "host_profile": "kristal.host/github/1.0",
+  "integration": "external-readonly",
+  "root_env": "KOMPILER_KRISTAL_STANDARD_ROOT",
+  "boundary_notes": {
+    "source_authority": "Mediatheque kOA owns persistent source bytes/snapshots; Kompiler may read source locators but never becomes the source store",
+    "local_inventory": "Kristal Manager owns discovery, validation, and GitHub read-surface synchronization; Kompiler only reads.",
+    "semantic_authority": "Kristal owns KQ/KP/KA/KS identity, v6-v10 semantic/hosting contracts and crystallization; Kompiler reads them and never mints Kristal identity",
+    "hosting": "GitHub sync, qualification, publication and activation are external to Kompiler authority",
+    "kompiler": "optional read-only context compiler; emits only Kompiler Context Packs",
+    "daat": "external optional Interaction Kernel boundary; not a Kompiler stage"
+  },
+  "additional_supported_versions": [
+    "10.0.0-draft.3",
+    "10.0.0-draft.3.1"
+  ],
+  "additional_contract_set_pins": {
+    "10.0.0-draft.3": "1e516dd026bce754fd4f22b874ba2d603f64954831a1b5c754ecbb475d29020f",
+    "10.0.0-draft.3.1": "fd8add31bb0a20159fd2e6c6c3175863a8195c9840e0b9f6a8cc388e57176c92"
+  },
+  "additional_version_policy": "Exact bundled pins for observed draft.3 and draft.3.1 contract sets, with explicit operator SHA-256 override permitted after independent verification. A matching version alone is never evidence of a matching standard; no Git commit is assumed."
+}

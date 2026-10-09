@@ -1,0 +1,10 @@
+id = "kristal-foodbrands"
+version = "1.0.0"
+target_id = "FoodBrands"
+kind = "kristal"
+
+[source]
+root = "/path/to/Kristal-FoodBrands"
+
+[implementation]
+type = "kristal-foodbrands"

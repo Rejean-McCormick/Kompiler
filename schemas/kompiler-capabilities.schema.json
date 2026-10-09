@@ -1,0 +1,401 @@
+{
+  "$defs": {
+    "AdapterDescriptor": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "minLength": 1,
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ],
+      "title": "AdapterDescriptor",
+      "type": "object"
+    },
+    "OperationCapability": {
+      "additionalProperties": false,
+      "properties": {
+        "operation_id": {
+          "minLength": 1,
+          "title": "Operation Id",
+          "type": "string"
+        },
+        "description": {
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "input_schema": {
+          "additionalProperties": true,
+          "title": "Input Schema",
+          "type": "object"
+        },
+        "output": {
+          "$ref": "#/$defs/OperationOutputDescriptor"
+        },
+        "semantics": {
+          "$ref": "#/$defs/OperationSemantics"
+        },
+        "limits": {
+          "$ref": "#/$defs/OperationLimits"
+        }
+      },
+      "required": [
+        "operation_id",
+        "description"
+      ],
+      "title": "OperationCapability",
+      "type": "object"
+    },
+    "OperationLimits": {
+      "additionalProperties": false,
+      "properties": {
+        "max_items": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Items"
+        },
+        "timeout_ms": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Timeout Ms"
+        },
+        "max_bytes": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Bytes"
+        }
+      },
+      "title": "OperationLimits",
+      "type": "object"
+    },
+    "OperationOutputDescriptor": {
+      "additionalProperties": false,
+      "properties": {
+        "record_kinds": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Record Kinds",
+          "type": "array"
+        },
+        "supports_provenance": {
+          "default": true,
+          "title": "Supports Provenance",
+          "type": "boolean"
+        }
+      },
+      "title": "OperationOutputDescriptor",
+      "type": "object"
+    },
+    "OperationSemantics": {
+      "additionalProperties": false,
+      "properties": {
+        "read_only": {
+          "default": true,
+          "title": "Read Only",
+          "type": "boolean"
+        },
+        "deterministic": {
+          "default": true,
+          "title": "Deterministic",
+          "type": "boolean"
+        },
+        "supports_reader_policy": {
+          "default": false,
+          "title": "Supports Reader Policy",
+          "type": "boolean"
+        },
+        "network": {
+          "default": false,
+          "title": "Network",
+          "type": "boolean"
+        },
+        "semantic_plane": {
+          "default": "source",
+          "enum": [
+            "source",
+            "meta"
+          ],
+          "title": "Semantic Plane",
+          "type": "string"
+        },
+        "requires_surface": {
+          "default": false,
+          "title": "Requires Surface",
+          "type": "boolean"
+        },
+        "v7_native": {
+          "default": false,
+          "title": "V7 Native",
+          "type": "boolean"
+        }
+      },
+      "title": "OperationSemantics",
+      "type": "object"
+    },
+    "RuntimeDescriptor": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "default": "kompiler",
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "version": {
+          "minLength": 1,
+          "title": "Version",
+          "type": "string"
+        },
+        "standard_support": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": "Standard Support",
+          "type": "object"
+        },
+        "conformance_profiles": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Conformance Profiles",
+          "type": "object"
+        }
+      },
+      "required": [
+        "version"
+      ],
+      "title": "RuntimeDescriptor",
+      "type": "object"
+    },
+    "SourceDescriptor": {
+      "additionalProperties": true,
+      "properties": {
+        "kristal_schema_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Kristal Schema Version"
+        },
+        "state_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "State Id"
+        },
+        "snapshot_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Snapshot Id"
+        },
+        "contract_family": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Contract Family"
+        },
+        "kristall_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Kristall Id"
+        },
+        "namespace_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Namespace Id"
+        },
+        "canonicalization_profile": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Canonicalization Profile"
+        },
+        "root_hint": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Root Hint"
+        },
+        "integrity": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Integrity"
+        }
+      },
+      "title": "SourceDescriptor",
+      "type": "object"
+    },
+    "TargetCapability": {
+      "additionalProperties": false,
+      "properties": {
+        "target_id": {
+          "minLength": 1,
+          "title": "Target Id",
+          "type": "string"
+        },
+        "kind": {
+          "default": "kristal",
+          "title": "Kind",
+          "type": "string"
+        },
+        "adapter": {
+          "$ref": "#/$defs/AdapterDescriptor"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceDescriptor"
+        },
+        "operations": {
+          "items": {
+            "$ref": "#/$defs/OperationCapability"
+          },
+          "title": "Operations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "target_id",
+        "adapter"
+      ],
+      "title": "TargetCapability",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "protocol": {
+      "const": "kompiler.capabilities",
+      "default": "kompiler.capabilities",
+      "title": "Protocol",
+      "type": "string"
+    },
+    "version": {
+      "default": "1.1",
+      "enum": [
+        "1.0",
+        "1.1"
+      ],
+      "title": "Version",
+      "type": "string"
+    },
+    "snapshot_id": {
+      "minLength": 1,
+      "title": "Snapshot Id",
+      "type": "string"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "runtime": {
+      "$ref": "#/$defs/RuntimeDescriptor"
+    },
+    "targets": {
+      "items": {
+        "$ref": "#/$defs/TargetCapability"
+      },
+      "title": "Targets",
+      "type": "array"
+    }
+  },
+  "required": [
+    "snapshot_id",
+    "runtime",
+    "targets"
+  ],
+  "title": "CapabilitySnapshot",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,286 @@
+{
+  "schema": "kompiler.docs-manifest/1.0",
+  "count": 56,
+  "files": [
+    {
+      "path": "docs/00-overview/principles.md",
+      "sha256": "dd290decd087593d71d41b011e5a901825d7ef582d253026ba444a9f1634b561",
+      "bytes": 2087
+    },
+    {
+      "path": "docs/00-overview/terminology.md",
+      "sha256": "3b2662511ddc31fdf3277b4a4d3096516849cc8e57547edf61e393b9d5c11ad5",
+      "bytes": 3357
+    },
+    {
+      "path": "docs/00-overview/vision.md",
+      "sha256": "d4e779baf51f59490fe856c0ea5782ecf4cd3dc08cc77788ac0dad48f925a11f",
+      "bytes": 2620
+    },
+    {
+      "path": "docs/01-architecture/ecosystem-boundaries.md",
+      "sha256": "b125d930fe31fc6863d8e0218755b3e0a36d829fb4b4ccbfb24627f5a26d8498",
+      "bytes": 4121
+    },
+    {
+      "path": "docs/01-architecture/lifecycle.md",
+      "sha256": "6ae5242fbb55d43bd67617fe8bd276dbcc0816daa9425a7fabcb9f7c29843371",
+      "bytes": 2860
+    },
+    {
+      "path": "docs/01-architecture/repository-layout.md",
+      "sha256": "30a4326d39ceb72dfc71dd350c2e8ba066c8bbd95f08f8bf98fd012189f91011",
+      "bytes": 2572
+    },
+    {
+      "path": "docs/01-architecture/system-architecture.md",
+      "sha256": "3df362983e0b198839ee75d909f6921245e952d906d1568caf8d03a07d12f0b5",
+      "bytes": 5924
+    },
+    {
+      "path": "docs/01-architecture/tech-stack.md",
+      "sha256": "e595d91ea594ee9a98091ad9ba1891b6bef997569017eecb5e5dae0f99bf7697",
+      "bytes": 2957
+    },
+    {
+      "path": "docs/02-protocol/capabilities-contract.md",
+      "sha256": "9130f06438c9a9061c2053e82bbb96e1b3094f2d345cc3aee0221e6ec3d97a02",
+      "bytes": 3094
+    },
+    {
+      "path": "docs/02-protocol/compatibility.md",
+      "sha256": "c152b4591de9618609a803b3e16700fc523a703edaf233e5d28ee0e855eb0624",
+      "bytes": 3010
+    },
+    {
+      "path": "docs/02-protocol/context-pack-contract.md",
+      "sha256": "e98bf142fc1ad09510c73f3873081e541e71f9cb7de9ff5f102570d1e33c77b3",
+      "bytes": 4608
+    },
+    {
+      "path": "docs/02-protocol/error-contract.md",
+      "sha256": "b58ddcb9a68849fea9527d8dc2adb25a6a8c079a14de94aeb244c26db90dc9bf",
+      "bytes": 1459
+    },
+    {
+      "path": "docs/02-protocol/protocol-overview.md",
+      "sha256": "6ce5392e9503242c9fd3b3e2dd98ce4fd9cb2c30caf80e851797976b05df23df",
+      "bytes": 1953
+    },
+    {
+      "path": "docs/02-protocol/query-contract.md",
+      "sha256": "13efce221e45b5c142cb399766eef23269f6b4523b11260ec5b97a6062881b7c",
+      "bytes": 4710
+    },
+    {
+      "path": "docs/02-protocol/v7-surface-contract.md",
+      "sha256": "0e0394339183c2e9a39e74c63147578a0f1da446d763aa5f4406d4e1cd55b2a5",
+      "bytes": 1270
+    },
+    {
+      "path": "docs/03-runtime/adapter-contract.md",
+      "sha256": "8df3a8ab23f55e66c27a5758928fc5d160dd6860582ad889ddd5737183d8aa4f",
+      "bytes": 2530
+    },
+    {
+      "path": "docs/03-runtime/budgeting-ranking.md",
+      "sha256": "1b3831157865f240559654c219130f622d4c2be5cbb7b9ad1b7414f9b4202682",
+      "bytes": 2893
+    },
+    {
+      "path": "docs/03-runtime/context-compiler.md",
+      "sha256": "0e10db05c80c43e81a2a2ce46919a48b7c93a36e54dc7ea5d416ce7c032dd166",
+      "bytes": 2168
+    },
+    {
+      "path": "docs/03-runtime/execution-engine.md",
+      "sha256": "2b57f5660c3116a88d96e68dfed69ca4d5d6c92ef0609e5b14ff2d6dafeb8798",
+      "bytes": 2816
+    },
+    {
+      "path": "docs/03-runtime/github-collection-reader.md",
+      "sha256": "c2e9ec28290acd2d2baa331c1a4484a36dcc95e5cb6eb1b717fc0c44f2bff3e7",
+      "bytes": 5624
+    },
+    {
+      "path": "docs/03-runtime/kristal-integration.md",
+      "sha256": "e35f8d02038282a3215e697b0b58c7223de961bfb9b8e224e2ffb2758708519b",
+      "bytes": 3889
+    },
+    {
+      "path": "docs/03-runtime/kristal-v9.md",
+      "sha256": "d5c30b20f2ed138d2e358fcd915028bff0125317fbd76cdff938d6c6f1a40061",
+      "bytes": 491
+    },
+    {
+      "path": "docs/03-runtime/kristall-v7.md",
+      "sha256": "46d9679995f5591cc490d6456ea92653e7c6621252642528a06342f157d0ef71",
+      "bytes": 6120
+    },
+    {
+      "path": "docs/03-runtime/storage-cache.md",
+      "sha256": "e8db4e0b1142b5c3cefb3164ed8219c386a553917b3aa729add3a3acd86047ed",
+      "bytes": 1886
+    },
+    {
+      "path": "docs/04-interfaces/cli.md",
+      "sha256": "83a279786c08146f6a966ba780663b28638b78eebe3f148139879b321ab8b1b3",
+      "bytes": 2650
+    },
+    {
+      "path": "docs/04-interfaces/desktop-ui.md",
+      "sha256": "f8d9effd3e7970f99ba87385b76f4357bb713218c8ca0c47b211ad6cd25af0e6",
+      "bytes": 1653
+    },
+    {
+      "path": "docs/04-interfaces/local-api.md",
+      "sha256": "b559ff0559d619fe998dc385cb61b6b09bd579230447ec6bbcd53d7fddfef872",
+      "bytes": 2597
+    },
+    {
+      "path": "docs/04-interfaces/transport.md",
+      "sha256": "517f8a3a99829dad735f2e5cccd3f44f6b98590c411e2ea7d6b9c1af7e28c7bd",
+      "bytes": 964
+    },
+    {
+      "path": "docs/05-security/determinism-provenance.md",
+      "sha256": "50818b706155816f61c19ed089694cd38b2eb3489efa72ef53f99c2294e4e895",
+      "bytes": 3470
+    },
+    {
+      "path": "docs/05-security/permissions-actionability.md",
+      "sha256": "b3df07b6ee4eefc70fe5ea72083cfe5ef20d935f042154f4dff1cc332692c38d",
+      "bytes": 1123
+    },
+    {
+      "path": "docs/05-security/security-trust.md",
+      "sha256": "b7d0526ff4bbd023f686804f6cd3555f6ab6aa643d2211cf25b02a95403dea36",
+      "bytes": 2335
+    },
+    {
+      "path": "docs/06-operations/configuration.md",
+      "sha256": "ab485e015a15c89e84b83d30e036cfabff32f5702091a99fbcc18134abb315b3",
+      "bytes": 1922
+    },
+    {
+      "path": "docs/06-operations/failure-recovery.md",
+      "sha256": "1bba1db90eaa0c3d45e4e43d7ca15913fecf40255888d7b60dd4d7d2da35027e",
+      "bytes": 1488
+    },
+    {
+      "path": "docs/06-operations/observability.md",
+      "sha256": "e8aad473a417243bb415ad122e4a8e610518624eb0afa992d9ea166d9626a485",
+      "bytes": 1255
+    },
+    {
+      "path": "docs/06-operations/releases-versioning.md",
+      "sha256": "5fe1048065e8f38c721f50e8b9a7ff6e6020ddbb86d7f4ce762ae79480374659",
+      "bytes": 1181
+    },
+    {
+      "path": "docs/07-development/adding-adapter.md",
+      "sha256": "49c5066ea12254b485247f21a2ae752cf43e5ecbcf0d06fa4695ebe02b9d043d",
+      "bytes": 1617
+    },
+    {
+      "path": "docs/07-development/coding-standards.md",
+      "sha256": "91c06e2a818f4a177fdee3c74998bee6218236ce38f5d802473117d115c1f948",
+      "bytes": 1197
+    },
+    {
+      "path": "docs/07-development/development.md",
+      "sha256": "f0328bf0645fb5c1ba51fe1d3ba391b2adb693fd0f6cf625604395550c25e84b",
+      "bytes": 1235
+    },
+    {
+      "path": "docs/07-development/governance.md",
+      "sha256": "7bf6580eb337fd4b826af7759cba0ebcbc2d10fa336bc026c33e49fae21d043c",
+      "bytes": 1295
+    },
+    {
+      "path": "docs/07-development/testing-conformance.md",
+      "sha256": "a7e83eccbc5c6bd2d3a2a6ea899aa15eeeab5ca6507fe8719c2e086eada9df02",
+      "bytes": 1880
+    },
+    {
+      "path": "docs/08-examples/multi-pass-session.md",
+      "sha256": "92163da1aca633f41314b97874350fef38f2544216c8b98bf15d7708c173ecbb",
+      "bytes": 1482
+    },
+    {
+      "path": "docs/08-examples/pollution-session.md",
+      "sha256": "4a84d62b44769a18d8d0f268b1e236a7e4f4a09c90d559632e926da8e967bcdd",
+      "bytes": 2446
+    },
+    {
+      "path": "docs/08-examples/query-recipes.md",
+      "sha256": "819725e48b0b7712ff964de01c339b71d75a185dae7fb81ab14d401699e3da90",
+      "bytes": 1441
+    },
+    {
+      "path": "docs/09-reference/adapter-manifests.md",
+      "sha256": "f1c3b2c5dd0ed76e49df2d2702aef980050d4e6df543636f01cc1d9f197fb0c5",
+      "bytes": 1133
+    },
+    {
+      "path": "docs/09-reference/built-in-adapters.md",
+      "sha256": "f765a9af7466a9d4c71c2175cfda25641a600b920abae598d0dc29055d84c77a",
+      "bytes": 2043
+    },
+    {
+      "path": "docs/09-reference/implementation-status.md",
+      "sha256": "ed2f8c137a3fc5a930faa457d3d96f7e65b5a9dc47933c11edec0a354f37b076",
+      "bytes": 2670
+    },
+    {
+      "path": "docs/09-reference/operator-workflow.md",
+      "sha256": "12d81fb392feca1d2345c41200acec0a654bc16ee94766c57932b0a31c883d85",
+      "bytes": 896
+    },
+    {
+      "path": "docs/ADR/0001-local-first.md",
+      "sha256": "72a260dd8a6f9c898faeb25cff9f646d4a1036a7632592d278902a3522b3474f",
+      "bytes": 590
+    },
+    {
+      "path": "docs/ADR/0002-declarative-query-plans.md",
+      "sha256": "b3abf10d690c82c7cd425716f13832dc30e1f397ee83f69f47dcc3cf09bc344e",
+      "bytes": 502
+    },
+    {
+      "path": "docs/ADR/0003-kristal-v6-semantics.md",
+      "sha256": "1aaaebf1c4c37a4bf830d0a8e568925bfa85595686e6b4d5502e8df398ee06cb",
+      "bytes": 631
+    },
+    {
+      "path": "docs/ADR/0004-no-arbitrary-shell.md",
+      "sha256": "5fcfeb66eada6c7264f0079c4a040493dea83aa3117552bcc7fed5b18e804d81",
+      "bytes": 499
+    },
+    {
+      "path": "docs/ADR/0005-kristall-v7-meta-plane.md",
+      "sha256": "40d389932fff5b75b7bc3c5d98c6676ed5d6d0dfeb7df685f6c2c872b0c8e9b9",
+      "bytes": 1430
+    },
+    {
+      "path": "docs/ADR/0006-ecosystem-authority-boundaries.md",
+      "sha256": "8d780e0fea10527c9e024e6d3bb26961fc2d97fc6437f1017dc2bc10a7e8d4e5",
+      "bytes": 1422
+    },
+    {
+      "path": "docs/ADR/README.md",
+      "sha256": "5e2e4f3373efe9789eeab37ade23a0e8bef855f7ebfabcec498308e24a89d8f0",
+      "bytes": 654
+    },
+    {
+      "path": "docs/INVENTORY.md",
+      "sha256": "bcb86b207280011fbadb83a6753fc5c6ff3adb94722d450f30696f20920a0702",
+      "bytes": 1942
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "320fc245647bb48f9ad4187dff609472328c1a6e024dd1e5eb854d0ee2750b52",
+      "bytes": 4086
+    }
+  ]
+}

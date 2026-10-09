@@ -1,0 +1,10 @@
+id = "kristal-scolqc"
+version = "1.0.0"
+target_id = "ScolQc"
+kind = "kristal"
+
+[source]
+root = "/path/to/Kristal-ScolQc/knowledge-base"
+
+[implementation]
+type = "kristal-scolqc"

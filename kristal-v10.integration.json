@@ -1,0 +1,51 @@
+{
+  "format": "kristal.ecosystem-integration/10.0",
+  "standard_target": "10.0.0-draft.3.1",
+  "framework_commit": null,
+  "component": "Kompiler",
+  "component_version": "0.8.0-alpha.1",
+  "role": "optional_read_only_context_compiler",
+  "authority": "context compilation only; no local inventory, GitHub synchronization, semantic source, publication, or activation authority",
+  "reads": [
+    "kristal_state/6.0",
+    "kristall/7.0",
+    "kristall/8.0",
+    "kristal.state/9.0",
+    "kristal.hosting/10.0",
+    "kristal.github-read-surface/1.0",
+    "kristal.github-sync-manifest/1.0",
+    "kristal.github-collection-index/1.0"
+  ],
+  "writes": [
+    "kompiler.context-pack/1.1"
+  ],
+  "dependencies": [
+    {
+      "component": "Kristal Manager",
+      "relationship": "optional local inventory/discovery upstream; Local Kit 3.2 paths are resolved read-only"
+    },
+    {
+      "component": "Kristal GitHub Bootstrap/Setup",
+      "relationship": "optional publication/activation upstream"
+    },
+    {
+      "component": "Médiathèque kOA",
+      "relationship": "optional persistent source-byte authority upstream"
+    },
+    {
+      "component": "Kristal Manager alpha.11+",
+      "relationship": "external exact read-surface host synchronization; Kompiler only reads derived index/manifests"
+    }
+  ],
+  "invariants": [
+    "LOCAL INVENTORY != SEMANTIC AUTHORITY",
+    "SYNC != PUBLICATION",
+    "PUBLICATION != ACTIVATION",
+    "CONTEXT PACK != KRISTAL CANON",
+    "HOST LOCATION != SEMANTIC IDENTITY"
+  ],
+  "legacy_supported_target": "10.0.0-draft.2",
+  "legacy_framework_commit": "27c0c7db3d79a4597c1c964fe8281fa35b5f858a",
+  "draft3_contract_set_sha256": "1e516dd026bce754fd4f22b874ba2d603f64954831a1b5c754ecbb475d29020f",
+  "draft31_contract_set_sha256": "fd8add31bb0a20159fd2e6c6c3175863a8195c9840e0b9f6a8cc388e57176c92"
+}

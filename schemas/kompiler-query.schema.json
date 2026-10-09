@@ -1,0 +1,497 @@
+{
+  "$defs": {
+    "ExecutionOptions": {
+      "additionalProperties": false,
+      "properties": {
+        "max_parallelism": {
+          "default": 4,
+          "minimum": 1,
+          "title": "Max Parallelism",
+          "type": "integer"
+        },
+        "default_timeout_ms": {
+          "default": 30000,
+          "minimum": 1,
+          "title": "Default Timeout Ms",
+          "type": "integer"
+        },
+        "on_operation_error": {
+          "default": "fail_dependents",
+          "enum": [
+            "abort_run",
+            "fail_dependents",
+            "continue"
+          ],
+          "title": "On Operation Error",
+          "type": "string"
+        },
+        "allow_compatible_capability_drift": {
+          "default": false,
+          "title": "Allow Compatible Capability Drift",
+          "type": "boolean"
+        },
+        "use_cache": {
+          "default": true,
+          "title": "Use Cache",
+          "type": "boolean"
+        }
+      },
+      "title": "ExecutionOptions",
+      "type": "object"
+    },
+    "InputBinding": {
+      "additionalProperties": false,
+      "properties": {
+        "from": {
+          "minLength": 1,
+          "title": "From",
+          "type": "string"
+        },
+        "selector": {
+          "default": "$.records[*]",
+          "minLength": 1,
+          "title": "Selector",
+          "type": "string"
+        },
+        "required": {
+          "default": true,
+          "title": "Required",
+          "type": "boolean"
+        },
+        "inject_as": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Inject As"
+        }
+      },
+      "required": [
+        "from"
+      ],
+      "title": "InputBinding",
+      "type": "object"
+    },
+    "OperationBudget": {
+      "additionalProperties": false,
+      "properties": {
+        "max_items": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Items"
+        },
+        "max_bytes": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Max Bytes"
+        }
+      },
+      "title": "OperationBudget",
+      "type": "object"
+    },
+    "QueryBudget": {
+      "additionalProperties": false,
+      "properties": {
+        "max_items": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": 1200,
+          "title": "Max Items"
+        },
+        "max_bytes": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": 1500000,
+          "title": "Max Bytes"
+        },
+        "target_tokens": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": 120000,
+          "title": "Target Tokens"
+        },
+        "selection_mode": {
+          "default": "balanced",
+          "enum": [
+            "balanced",
+            "lexical"
+          ],
+          "title": "Selection Mode",
+          "type": "string"
+        }
+      },
+      "title": "QueryBudget",
+      "type": "object"
+    },
+    "QueryContext": {
+      "additionalProperties": false,
+      "properties": {
+        "reader_policy": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reader Policy"
+        },
+        "locale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": "fr-CA",
+          "title": "Locale"
+        }
+      },
+      "title": "QueryContext",
+      "type": "object"
+    },
+    "QueryOperation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "minLength": 1,
+          "title": "Id",
+          "type": "string"
+        },
+        "target": {
+          "minLength": 1,
+          "title": "Target",
+          "type": "string"
+        },
+        "operation": {
+          "minLength": 1,
+          "title": "Operation",
+          "type": "string"
+        },
+        "params": {
+          "additionalProperties": true,
+          "title": "Params",
+          "type": "object"
+        },
+        "surface": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SurfaceSelector"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "inputs": {
+          "items": {
+            "$ref": "#/$defs/InputBinding"
+          },
+          "title": "Inputs",
+          "type": "array"
+        },
+        "budget": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/OperationBudget"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "timeout_ms": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Timeout Ms"
+        },
+        "on_error": {
+          "anyOf": [
+            {
+              "enum": [
+                "abort_run",
+                "fail_dependents",
+                "continue"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "On Error"
+        }
+      },
+      "required": [
+        "id",
+        "target",
+        "operation"
+      ],
+      "title": "QueryOperation",
+      "type": "object"
+    },
+    "ReturnOptions": {
+      "additionalProperties": false,
+      "properties": {
+        "include_provenance": {
+          "default": true,
+          "title": "Include Provenance",
+          "type": "boolean"
+        },
+        "include_raw_refs": {
+          "default": true,
+          "title": "Include Raw Refs",
+          "type": "boolean"
+        },
+        "include_conflicts": {
+          "default": true,
+          "title": "Include Conflicts",
+          "type": "boolean"
+        },
+        "include_gaps": {
+          "default": true,
+          "title": "Include Gaps",
+          "type": "boolean"
+        },
+        "include_operation_outputs": {
+          "default": false,
+          "title": "Include Operation Outputs",
+          "type": "boolean"
+        }
+      },
+      "title": "ReturnOptions",
+      "type": "object"
+    },
+    "SurfaceOrientation": {
+      "additionalProperties": false,
+      "properties": {
+        "primary_axis": {
+          "minLength": 1,
+          "title": "Primary Axis",
+          "type": "string"
+        },
+        "secondary_axis": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Secondary Axis"
+        }
+      },
+      "required": [
+        "primary_axis"
+      ],
+      "title": "SurfaceOrientation",
+      "type": "object"
+    },
+    "SurfaceSelector": {
+      "additionalProperties": false,
+      "properties": {
+        "subject": {
+          "$ref": "#/$defs/SurfaceSubject"
+        },
+        "orientation": {
+          "$ref": "#/$defs/SurfaceOrientation"
+        },
+        "context": {
+          "additionalProperties": true,
+          "title": "Context",
+          "type": "object"
+        },
+        "source_policy": {
+          "additionalProperties": true,
+          "title": "Source Policy",
+          "type": "object"
+        },
+        "conflict_policy": {
+          "const": "preserve_disagreement",
+          "default": "preserve_disagreement",
+          "title": "Conflict Policy",
+          "type": "string"
+        }
+      },
+      "required": [
+        "subject",
+        "orientation"
+      ],
+      "title": "SurfaceSelector",
+      "type": "object"
+    },
+    "SurfaceSubject": {
+      "additionalProperties": false,
+      "properties": {
+        "subject_id": {
+          "minLength": 1,
+          "title": "Subject Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "subject_id"
+      ],
+      "title": "SurfaceSubject",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "protocol": {
+      "const": "kompiler.query",
+      "default": "kompiler.query",
+      "title": "Protocol",
+      "type": "string"
+    },
+    "version": {
+      "default": "1.1",
+      "enum": [
+        "1.0",
+        "1.1"
+      ],
+      "title": "Version",
+      "type": "string"
+    },
+    "request_id": {
+      "minLength": 1,
+      "title": "Request Id",
+      "type": "string"
+    },
+    "capability_snapshot_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Capability Snapshot Id"
+    },
+    "intent": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Intent"
+    },
+    "topic": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Topic"
+    },
+    "parent_context_pack_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Parent Context Pack Id"
+    },
+    "operations": {
+      "items": {
+        "$ref": "#/$defs/QueryOperation"
+      },
+      "minItems": 1,
+      "title": "Operations",
+      "type": "array"
+    },
+    "context": {
+      "$ref": "#/$defs/QueryContext"
+    },
+    "budget": {
+      "$ref": "#/$defs/QueryBudget"
+    },
+    "execution": {
+      "$ref": "#/$defs/ExecutionOptions"
+    },
+    "return": {
+      "$ref": "#/$defs/ReturnOptions"
+    }
+  },
+  "required": [
+    "request_id",
+    "operations"
+  ],
+  "title": "QueryPlan",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

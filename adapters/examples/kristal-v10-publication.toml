@@ -1,0 +1,10 @@
+id = "kristal-v10-publication"
+version = "1.0.0"
+target_id = "KristalV10Publication:example"
+kind = "kristal"
+
+[source]
+root = "C:/path/to/downloaded/publication-bundle"
+
+[implementation]
+type = "kristal-v10-publication"

@@ -1,0 +1,10 @@
+id = "kristal-humanbody"
+version = "1.0.0"
+target_id = "HumanBody"
+kind = "kristal"
+
+[source]
+root = "/path/to/Kristal-HumanBody/knowledge-base"
+
+[implementation]
+type = "kristal-humanbody"

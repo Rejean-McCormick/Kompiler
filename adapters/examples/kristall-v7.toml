@@ -1,0 +1,10 @@
+id = "kristall-v7"
+version = "1.0.0"
+target_id = "Kristall:kristall-main"
+kind = "kristall"
+
+[source]
+root = "/path/to/Kristall-v7-deployment"
+
+[implementation]
+type = "kristall-v7"

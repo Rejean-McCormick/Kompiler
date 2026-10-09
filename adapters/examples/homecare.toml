@@ -1,0 +1,10 @@
+id = "kristal-homecare"
+version = "1.0.0"
+target_id = "HomeCare"
+kind = "kristal"
+
+[source]
+root = "/path/to/Kristal-HomeCare/knowledge-base"
+
+[implementation]
+type = "kristal-homecare"

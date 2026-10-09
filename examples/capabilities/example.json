@@ -1,0 +1,25 @@
+{
+  "protocol": "kompiler.capabilities",
+  "version": "1.1",
+  "snapshot_id": "cap:sha256:example",
+  "generated_at": "2026-10-02T16:00:00Z",
+  "runtime": {
+    "name": "kompiler",
+    "version": "0.4.0",
+    "standard_support": {
+      "kristal_state": [
+        "6.0"
+      ],
+      "kristall": [
+        "7.0.0-draft.3.2"
+      ],
+      "semantic_resonance": [
+        "1.0"
+      ]
+    },
+    "conformance_profiles": {
+      "kristal_v7": "V7-Projection"
+    }
+  },
+  "targets": []
+}

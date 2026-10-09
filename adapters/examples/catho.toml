@@ -1,0 +1,10 @@
+id = "kristal-catho"
+version = "1.0.0"
+target_id = "Catho"
+kind = "kristal"
+
+[source]
+root = "/path/to/Kristal-Catho/knowledge-base"
+
+[implementation]
+type = "kristal-catho"

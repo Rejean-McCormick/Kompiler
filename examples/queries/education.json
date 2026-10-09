@@ -1,0 +1,11 @@
+{
+  "protocol": "kompiler.query",
+  "version": "1.1",
+  "request_id": "education-001",
+  "intent": "build_context",
+  "topic": "progression mathématique secondaire",
+  "operations": [
+    {"id":"curriculum","target":"ScolQc","operation":"progression_grade","params":{"grade":"secondaire_2"}},
+    {"id":"math","target":"Math","operation":"find","params":{"domain":"algebra","limit":250}}
+  ]
+}

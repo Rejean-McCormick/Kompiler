@@ -1,0 +1,10 @@
+id = "kristal-vehiclediag"
+version = "1.0.0"
+target_id = "VehicleDiag"
+kind = "kristal"
+
+[source]
+root = "/path/to/Kristal-VehiculeDiag/knowledge-base"
+
+[implementation]
+type = "kristal-vehiclediag"

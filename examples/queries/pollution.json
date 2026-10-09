@@ -1,0 +1,24 @@
+{
+  "protocol": "kompiler.query",
+  "version": "1.1",
+  "request_id": "pollution-001",
+  "intent": "build_context",
+  "topic": "pollution",
+  "operations": [
+    {
+      "id": "human_pollution",
+      "target": "HumanBody",
+      "operation": "find",
+      "params": {"text": "pollution", "limit": 300}
+    },
+    {
+      "id": "power_pollution",
+      "target": "Power",
+      "operation": "search",
+      "params": {"text": "pollution", "limit": 200}
+    }
+  ],
+  "budget": {"max_items": 800, "max_bytes": 1500000, "target_tokens": 120000},
+  "execution": {"max_parallelism": 4, "default_timeout_ms": 30000, "on_operation_error": "fail_dependents", "allow_compatible_capability_drift": false, "use_cache": true},
+  "return": {"include_provenance": true, "include_raw_refs": true, "include_conflicts": true, "include_gaps": true, "include_operation_outputs": false}
+}

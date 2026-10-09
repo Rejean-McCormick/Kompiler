@@ -1,0 +1,10 @@
+id = "kristal-math"
+version = "1.0.0"
+target_id = "Math"
+kind = "kristal"
+
+[source]
+root = "/path/to/Kristal-Math/knowledge-base"
+
+[implementation]
+type = "kristal-math"

@@ -1,0 +1,11 @@
+{
+  "protocol": "kompiler.query",
+  "version": "1.1",
+  "request_id": "recipes-001",
+  "intent": "build_context",
+  "topic": "recettes rapides avec substitution",
+  "operations": [
+    {"id":"recipes","target":"Recipes","operation":"search","params":{"ingredients":["egg"],"max_active_min":30,"limit":50}},
+    {"id":"subs","target":"Recipes","operation":"substitutions","params":{"ingredient":"egg"}}
+  ]
+}

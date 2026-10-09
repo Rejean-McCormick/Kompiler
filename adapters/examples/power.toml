@@ -1,0 +1,10 @@
+id = "kristal-power"
+version = "1.0.0"
+target_id = "Power"
+kind = "kristal"
+
+[source]
+root = "/path/to/Kristal-Power/power-knowledge-base"
+
+[implementation]
+type = "kristal-power"

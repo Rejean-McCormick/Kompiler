@@ -1,0 +1,10 @@
+id = "kristal-v6-state"
+version = "1.0.0"
+target_id = "KristalState:example"
+kind = "kristal"
+
+[source]
+root = "/path/to/kristal-state.json"
+
+[implementation]
+type = "kristal-v6-state"

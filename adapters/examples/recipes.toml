@@ -1,0 +1,10 @@
+id = "kristal-recipes"
+version = "1.0.0"
+target_id = "Recipes"
+kind = "kristal"
+
+[source]
+root = "/path/to/Kristal-Recipes/knowledge-base"
+
+[implementation]
+type = "kristal-recipes"

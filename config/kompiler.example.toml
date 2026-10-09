@@ -1,0 +1,49 @@
+[runtime]
+max_parallelism = 4
+default_timeout_ms = 30000
+max_stdout_bytes = 8000000
+max_join_items = 20000
+strict_protocol = true
+network_default = "deny"
+
+[budgets]
+max_items = 5000
+max_bytes = 10000000
+max_target_tokens = 250000
+
+[storage]
+database = "~/.local/share/kompiler/kompiler.db"
+retention = "metadata"
+cache = true
+
+[logging]
+level = "INFO"
+format = "json"
+
+[api]
+enabled = true
+host = "127.0.0.1"
+port = 7788
+cors_origins = ["http://localhost:1420", "http://127.0.0.1:1420", "tauri://localhost", "https://tauri.localhost"]
+
+[kristal_standard]
+# External normative Kristal contracts. For the current Windows pilot:
+root = "C:/mycode/Kristal/Kristal-Framework"
+# Optional for a different draft.3 contract set; supplied snapshot is already pinned:
+# contract_set_sha256 = "<64-character lowercase hex SHA-256>"
+
+[kristal_manager]
+# Optional operator-owned local inventory. It is discovery only, never semantic authority.
+catalog = "C:/mycode/Kristal/kristal-manager.json"
+auto_discover = true
+
+# Explicit trusted adapter manifests remain supported:
+# [adapters.example]
+# manifest = "~/.config/kompiler/adapters/example.toml"
+
+[github]
+# Optional: local collection checkouts work offline; remote URLs require `gh auth login`.
+# For remote Context Pack targets, set [runtime].network_default = "allow" deliberately.
+collections = []
+# Example: ["C:/mycode/Kristal/kristal-public"]
+# Example: ["https://github.com/Rejean-McCormick/kristal-public"]
