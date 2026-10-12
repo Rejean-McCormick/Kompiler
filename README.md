@@ -1,163 +1,31 @@
-# Kompiler
+# Kompiler — English v10 Alignment Patch
 
-Kompiler is an **optional, local-first, read-only context compiler** for LLM/query sessions over Kristal knowledge.
+**Target repository:** `Rejean-McCormick/Kompiler`  
+**Inspected base commit:** `2e6cca3941e1c8e199d21b494107b25a5daada7c`  
+**Status:** local, reviewable update; GitHub did **not** accept a branch creation (`403 Resource not accessible by integration`).
 
-**Runtime:** `0.8.0-alpha.1`  
-**Kristal alignment:** exact contract-set pins for `10.0.0-draft.2` and the supplied `10.0.0-draft.3` snapshot; an explicit operator SHA-256 is still accepted for another draft.3 checkout  
-**Legacy draft.2 Framework commit:** `27c0c7db3d79a4597c1c964fe8281fa35b5f858a` (not asserted for draft.3)  
-**Legacy draft.2 contract-set:** `sha256:929166240f65c25e4feb6d0346f69b9122d0df861365ec40128337a6462a2ad0`
+This bundle is an incremental update **for the existing Kompiler repository**, not a replacement repository. It preserves the current v10 reader, Framework pins and existing tests while adding traceable provenance to returned GitHub read-surface data.
 
-## Position in the current Kristal toolchain
+## Preview, apply and test
 
-```text
-Kristal Manager
-  local inventory + validation + public/private GitHub read-surface sync
-          │
-          ├───────────────┐
-          ▼               ▼
-local Kristals       Kristal GitHub Bootstrap / Setup
-                         qualify → publish → activate
-          │               │
-          └──── read-only ─┘
-                  ▼
-               Kompiler
-        task-specific Context Pack
-                  ▼
-                 LLM
-```
+From an existing local checkout of `Rejean-McCormick/Kompiler`:
 
-Kompiler is **not required** to manage, synchronize, publish or activate Kristals. It is useful when you want to select/read several Kristal surfaces and compile a bounded, provenance-preserving Context Pack for an LLM.
-
-## Boundaries
-
-- **Kristal Manager** owns operator-local inventory, local folder discovery, validation orchestration and GitHub read-surface synchronization.
-- **Kristal GitHub Bootstrap / Setup** owns hosted-network provisioning plus qualification/publication/activation workflows.
-- **Médiathèque kOA** owns persistent external source bytes/snapshots and source locators when used.
-- **Kristal** owns semantic identity, state commitments and v10 hosting/publication contracts.
-- **Kompiler** reads those surfaces and emits only `kompiler.context-pack`. It never mints Kristal identity, changes hosted collection visibility, publishes states, or activates channels.
-
-## New in 0.8.0-alpha.1
-
-- Verified bundled SHA-256 pin for the provided Kristal Framework v10 draft.3 snapshot, retaining exact draft.2 compatibility.
-- Opt-in `budget.selection_mode = "lexical"` for reproducible query-topic overlap ranking *within each target*, while preserving target fairness; the default `balanced` mode and previous query hashes remain unchanged.
-- Repaired a budgeting case where an oversized record could prevent a later smaller record from being selected.
-- Strengthened GitHub read-surface validation: strict base64 decoding, remote byte-count checks, control-character rejection, summary/manifest consistency, and no stale local file cache masking tampering.
-- These are read-only retrieval improvements: no GitHub sync, publication, activation, or semantic authority is added.
-
-Example request budget:
-
-```json
-{"topic":"solar energy", "budget":{"max_items":30, "selection_mode":"lexical"}}
-```
-
-Use the example budget **inside** a complete `kompiler.query` request. See [context ranking](docs/03-runtime/budgeting-ranking.md).
-
-## Previous: 0.7.0-alpha.3
-
-Kompiler can now read the **GitHub collection index** (local checkout or remote GitHub URL), select the appropriate `kristals/<slug>/`, verify the Manager sync manifest, compare `surface_digest` and file SHA-256s, and compile selected text into bounded Context Packs. No cloning, sync, publication or activation. See [GitHub collection reader](docs/03-runtime/github-collection-reader.md).
-
-Existing Local Kit 3.2.4+, Manager alpha.11+, GitHub Bootstrap alpha.10+ and Framework draft.3 read-surface contracts are consumed rather than redefined. The new reader is indexed and lazy, suitable for collections containing thousands of Kristals. The GUI adds a GitHub browser. For the supplied draft.3 snapshot, the contract set is pinned automatically; other draft.3 checkouts require an explicit verified SHA-256.
-
-## Previous: 0.7.0-alpha.2
-
-### Local Kit 3.2 read surfaces
-
-Kompiler now discovers a normal `kristal.local-workspace/3.2.0` directly. For a Local Kristal workspace, read-only v9 discovery uses this explicit order:
-
-```text
-build/v9/state-snapshot.json      current working build
-state/state-snapshot.json         optional portable-AI mirror
-.kristal/v9/...                   legacy compatibility
-state-snapshot.json               legacy compatibility
-release/v9/states/**              auto-selected only when exactly one release exists
-```
-
-Kompiler does **not** infer a historical "latest" release from timestamps or digest ordering. If a workspace has multiple historical local releases and no current build/mirror, point Kompiler at the exact release directory or state file. This avoids silently reading the wrong state.
-
-For Local Kit builds, `build/v9/artifacts/*.logical-artifact.json` is exposed through the read-only `artifacts` operation.
-
-### Kristal Manager integration
-
-Kompiler can read the non-semantic local inventory produced by Kristal Manager:
-
-```powershell
-kompiler locals --catalog C:\mycode\Kristal\kristal-manager.json --discover-adapters
-```
-
-Or configure:
-
-```toml
-[kristal_manager]
-catalog = "C:/mycode/Kristal/kristal-manager.json"
-auto_discover = true
-```
-
-When `auto_discover=true`, Kompiler treats the catalog only as a list of local paths. The catalog never becomes semantic authority.
-
-### v10 Publication Reader
-
-A verified local publication bundle containing:
-
-```text
-publication.json
-bundle-manifest.json
-state-snapshot.json
-```
-
-is detected as `kristal-v10-publication`. Kompiler validates the external Kristal v10/v9 schemas, byte digests, manifest binding and publication identity before exposing read-only `publication` and `state` operations.
-
-### Exact Standard pin
-
-Both the historical `10.0.0-draft.2` and supplied `10.0.0-draft.3` contract sets are pinned to exact SHA-256 hashes; a different draft.3 contract set requires an explicit operator SHA-256. No GitHub commit is inferred.
-
-## Configure the Framework
-
-```powershell
-$env:KOMPILER_KRISTAL_STANDARD_ROOT = "C:\mycode\Kristal\KristalV10"
-```
-
-or:
-
-```toml
-[kristal_standard]
-root = "C:/mycode/Kristal/Kristal-Framework"
-# Optional: for a different draft.3 contract set, contract_set_sha256 = "<64 hex characters>"
-```
-
-## Windows control panel
-
-`Kompiler.pyw` is a lightweight optional control panel. It reads the Kristal Manager catalog, shows local Kristals, discovers readable targets, runs Context Query JSON locally, and can start/stop the loopback API. It does **not** back up, publish, or activate anything.
-
-Defaults for the current pilot:
-
-```text
-Workspace:       C:\mycode\Kristal
-Manager catalog: C:\mycode\Kristal\kristal-manager.json
-Framework:       C:\mycode\Kristal\Kristal-Framework
-```
-
-## Typical local workflow
-
-```powershell
-# Inspect Kristal Manager inventory
-python -m kompiler locals --discover-adapters
-
-# Inspect readable targets
-python -m kompiler capabilities
-
-# Compile a context pack
-python -m kompiler run query.json -o context-pack.json
-
-# Navigate a GitHub collection without cloning thousands of Kristals
-python -m kompiler github catalog https://github.com/Rejean-McCormick/kristal-public --query zoology
-python -m kompiler github read https://github.com/Rejean-McCormick/kristal-public zoology AI_START_HERE.md
-```
-
-## Validation
-
-```powershell
-$env:KOMPILER_KRISTAL_STANDARD_ROOT = "C:\mycode\Kristal\KristalV10"
+```bash
+python /path/to/Kompiler_v10_Alignment_Update_EN/scripts/apply_update.py /path/to/Kompiler
+python /path/to/Kompiler_v10_Alignment_Update_EN/scripts/apply_update.py /path/to/Kompiler --apply --backup-dir /path/to/backup
+cd /path/to/Kompiler
+python -m pytest tests/integration/test_v10_provenance_metadata.py -v
 python -m pytest
+python -m ruff check src tests
+git diff --check && git diff
 ```
 
-Kompiler does not vendor Kristal normative schemas. They are loaded from the exact external Framework pin.
+The script is **dry-run by default** and refuses missing/changed anchors rather than guessing how to rewrite newer code. If the repository has uncommitted changes, save them before applying this update. Run the tests before committing anything.
+
+## Included
+
+- `scripts/apply_update.py` — exact-anchor, fail-closed local patcher;
+- `tests/test_v10_provenance_metadata.py` — regression tests to install into `tests/integration/`;
+- `docs/v10-alignment-update.md` — English architecture and qualification boundaries to install into `docs/03-runtime/`.
+
+No network write, publication, activation, external canonical state mutation or version relabeling is performed by this bundle.
