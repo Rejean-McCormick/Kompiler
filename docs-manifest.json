@@ -1,6 +1,6 @@
 {
   "schema": "kompiler.docs-manifest/1.0",
-  "count": 56,
+  "count": 61,
   "files": [
     {
       "path": "docs/00-overview/principles.md",
@@ -88,6 +88,11 @@
       "bytes": 2893
     },
     {
+      "path": "docs/03-runtime/c5-zoology-qualification.md",
+      "sha256": "1116fb115623ebec1d36462302592073df1a059a1d90b7f47a2997b711fcf22a",
+      "bytes": 3287
+    },
+    {
       "path": "docs/03-runtime/context-compiler.md",
       "sha256": "0e10db05c80c43e81a2a2ce46919a48b7c93a36e54dc7ea5d416ce7c032dd166",
       "bytes": 2168
@@ -99,13 +104,18 @@
     },
     {
       "path": "docs/03-runtime/github-collection-reader.md",
-      "sha256": "c2e9ec28290acd2d2baa331c1a4484a36dcc95e5cb6eb1b717fc0c44f2bff3e7",
-      "bytes": 5624
+      "sha256": "750d5b373669a538c6c9813d453300cd99eef5a72cb5194f816f7ef97c6fec96",
+      "bytes": 5653
     },
     {
       "path": "docs/03-runtime/kristal-integration.md",
-      "sha256": "e35f8d02038282a3215e697b0b58c7223de961bfb9b8e224e2ffb2758708519b",
-      "bytes": 3889
+      "sha256": "8e44b36141db62f0275743a0c9d13a24c7971d712b2350a02b19db11aa167a43",
+      "bytes": 3914
+    },
+    {
+      "path": "docs/03-runtime/kristal-v11-derived-context.md",
+      "sha256": "a5ce9c32d6d08b74b079a764ebf42bc1400c66c464e97bbcf04d57a1a5226a03",
+      "bytes": 4737
     },
     {
       "path": "docs/03-runtime/kristal-v9.md",
@@ -121,6 +131,11 @@
       "path": "docs/03-runtime/storage-cache.md",
       "sha256": "e8db4e0b1142b5c3cefb3164ed8219c386a553917b3aa729add3a3acd86047ed",
       "bytes": 1886
+    },
+    {
+      "path": "docs/03-runtime/v10-alignment-update.md",
+      "sha256": "1d294b39bd69c77a7c8082992519072f4ffa9a849cdea6277e5c2e836c7a99c8",
+      "bytes": 4251
     },
     {
       "path": "docs/04-interfaces/cli.md",
@@ -281,6 +296,16 @@
       "path": "docs/README.md",
       "sha256": "320fc245647bb48f9ad4187dff609472328c1a6e024dd1e5eb854d0ee2750b52",
       "bytes": 4086
+    },
+    {
+      "path": "docs/VALIDATION_KOMPILER_V11_LOCAL_2026_10_27.md",
+      "sha256": "e5b505aa183df01cb84cad68b2580f226ec277dbf8ab1bc3061a1a8458496a60",
+      "bytes": 3228
+    },
+    {
+      "path": "docs/v10-alignment-update.md",
+      "sha256": "1d294b39bd69c77a7c8082992519072f4ffa9a849cdea6277e5c2e836c7a99c8",
+      "bytes": 4251
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schema": "kompiler.repo-manifest/1.0",
   "version": "0.8.0-alpha.1",
-  "file_count": 204,
+  "file_count": 222,
   "files": [
     {
       "path": ".github/ISSUE_TEMPLATE/bug.md",
@@ -20,8 +20,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 10826,
-      "sha256": "8798dca85bfafddfa33f7145de1911d05543f61d8c0ca6d369a1bfbcd8d50154"
+      "bytes": 11532,
+      "sha256": "fb838826276ce764f0e8fcd11d74d57f01228e5d04adce73b24d6b058ed29053"
     },
     {
       "path": "CONTRIBUTING.md",
@@ -30,8 +30,8 @@
     },
     {
       "path": "GitSink.bat",
-      "bytes": 781,
-      "sha256": "15b0af32d211ff210de0ed87eb4b374cf41f9302d92baf82a464a518ffe2c97e"
+      "bytes": 1863,
+      "sha256": "26c1bd8e8c7dc4d8adb1fe6da128b020ffbb7d90d54ad402ce3e64f2ce10b109"
     },
     {
       "path": "Kompiler.pyw",
@@ -44,19 +44,34 @@
       "sha256": "7cd152f83af76fd41654cbeb7bb8337fd58d0842750930f16865c185a7ae447b"
     },
     {
+      "path": "Launch_MULTiSmartDump.lnk",
+      "bytes": 1359,
+      "sha256": "597cb480ff60a1169b72f50df355256fefb23e5bcc03b382b1be07428b14821b"
+    },
+    {
       "path": "Makefile",
       "bytes": 436,
       "sha256": "f70f748d4ae74888a9d0209be0a184a33d197a7d1e28bfeed92d075003fa6757"
     },
     {
       "path": "README.md",
-      "bytes": 7506,
-      "sha256": "599f16e3cb4c869102ac8fc1e231b1e4eac56809a13d1a2cfb122a47a9ff23c4"
+      "bytes": 2579,
+      "sha256": "fdfb62163b9c886de10b50c6e33149ed796cd676bab73719dc8dec84d32ac949"
     },
     {
       "path": "SECURITY.md",
       "bytes": 601,
       "sha256": "635bd7d5fe40414f8482c99e532dbc2c8ceb561d1b6b38d34b7bbe722ee9224d"
+    },
+    {
+      "path": "SHA256SUMS.txt",
+      "bytes": 457,
+      "sha256": "e21c2c04a56212329ab62b611a50f3f8256936586fcdb838230c4b1f2c04323a"
+    },
+    {
+      "path": "SNAPSHOT_INDEX.txt",
+      "bytes": 6983,
+      "sha256": "6eabf8d8014a63589164ddc4b373ac37934006d4cb00234a1e45cddf7f4721a0"
     },
     {
       "path": "SmartSnap.pyw",
@@ -77,6 +92,11 @@
       "path": "WINDOWS_UPGRADE.md",
       "bytes": 1714,
       "sha256": "dae78312632ca01917f8b4eea743b676b9f2ea1844743dd34849a1ef0a5f1ee5"
+    },
+    {
+      "path": "ZmartZnap.pyw",
+      "bytes": 22889,
+      "sha256": "70775b94ff616ed9efdb3d6b989639fa3cd22a250f1389fec485791d161df1ea"
     },
     {
       "path": "adapters/examples/catho.toml",
@@ -107,6 +127,11 @@
       "path": "adapters/examples/kristal-v10-publication.toml",
       "bytes": 221,
       "sha256": "c04828c576a03bbd047755c8453cc8de16fe9171ead1f47b14b74b79435e0bda"
+    },
+    {
+      "path": "adapters/examples/kristal-v11-read-view.toml",
+      "bytes": 693,
+      "sha256": "85ed6d3617a50575cc5bca41d4c82c5048f3ec49b21707480f08dc9e2e8c7c54"
     },
     {
       "path": "adapters/examples/kristal-v6-state.toml",
@@ -289,6 +314,11 @@
       "sha256": "1b3831157865f240559654c219130f622d4c2be5cbb7b9ad1b7414f9b4202682"
     },
     {
+      "path": "docs/03-runtime/c5-zoology-qualification.md",
+      "bytes": 3287,
+      "sha256": "1116fb115623ebec1d36462302592073df1a059a1d90b7f47a2997b711fcf22a"
+    },
+    {
       "path": "docs/03-runtime/context-compiler.md",
       "bytes": 2168,
       "sha256": "0e10db05c80c43e81a2a2ce46919a48b7c93a36e54dc7ea5d416ce7c032dd166"
@@ -300,13 +330,18 @@
     },
     {
       "path": "docs/03-runtime/github-collection-reader.md",
-      "bytes": 5624,
-      "sha256": "c2e9ec28290acd2d2baa331c1a4484a36dcc95e5cb6eb1b717fc0c44f2bff3e7"
+      "bytes": 5653,
+      "sha256": "750d5b373669a538c6c9813d453300cd99eef5a72cb5194f816f7ef97c6fec96"
     },
     {
       "path": "docs/03-runtime/kristal-integration.md",
-      "bytes": 3889,
-      "sha256": "e35f8d02038282a3215e697b0b58c7223de961bfb9b8e224e2ffb2758708519b"
+      "bytes": 3914,
+      "sha256": "8e44b36141db62f0275743a0c9d13a24c7971d712b2350a02b19db11aa167a43"
+    },
+    {
+      "path": "docs/03-runtime/kristal-v11-derived-context.md",
+      "bytes": 4737,
+      "sha256": "a5ce9c32d6d08b74b079a764ebf42bc1400c66c464e97bbcf04d57a1a5226a03"
     },
     {
       "path": "docs/03-runtime/kristal-v9.md",
@@ -322,6 +357,11 @@
       "path": "docs/03-runtime/storage-cache.md",
       "bytes": 1886,
       "sha256": "e8db4e0b1142b5c3cefb3164ed8219c386a553917b3aa729add3a3acd86047ed"
+    },
+    {
+      "path": "docs/03-runtime/v10-alignment-update.md",
+      "bytes": 4251,
+      "sha256": "1d294b39bd69c77a7c8082992519072f4ffa9a849cdea6277e5c2e836c7a99c8"
     },
     {
       "path": "docs/04-interfaces/cli.md",
@@ -484,9 +524,19 @@
       "sha256": "320fc245647bb48f9ad4187dff609472328c1a6e024dd1e5eb854d0ee2750b52"
     },
     {
+      "path": "docs/VALIDATION_KOMPILER_V11_LOCAL_2026_10_27.md",
+      "bytes": 3228,
+      "sha256": "e5b505aa183df01cb84cad68b2580f226ec277dbf8ab1bc3061a1a8458496a60"
+    },
+    {
+      "path": "docs/v10-alignment-update.md",
+      "bytes": 4251,
+      "sha256": "1d294b39bd69c77a7c8082992519072f4ffa9a849cdea6277e5c2e836c7a99c8"
+    },
+    {
       "path": "docs-manifest.json",
-      "bytes": 9596,
-      "sha256": "9706e08afa9713d9b97312d4ee0be540c197c713b304b81334fbf829181faae3"
+      "bytes": 10475,
+      "sha256": "95fcc0499ea37de7f4ca969eefc8a77051f841716627681bbd58bc933d836252"
     },
     {
       "path": "examples/capabilities/example.json",
@@ -515,8 +565,8 @@
     },
     {
       "path": "kristal-v10.integration.json",
-      "bytes": 1694,
-      "sha256": "250947a178e3bee77eafe22fefc924ff2ba9f8a9582281df979a6ce523a1d719"
+      "bytes": 1840,
+      "sha256": "8b796930f948394b115901f1f1760633382db85c23ab2b8fb47901efe49bc7ee"
     },
     {
       "path": "pyproject.toml",
@@ -542,6 +592,11 @@
       "path": "schemas/kompiler-query.schema.json",
       "bytes": 10845,
       "sha256": "02c39ac3427e9e61fd6c2fd6188f9214fdc42a2a6c1861ea753de6bed4395a7b"
+    },
+    {
+      "path": "scripts/apply_update.py",
+      "bytes": 7462,
+      "sha256": "a1cd9b39718b3c6e330a123fd99735202acf4e781d557609b76da233a5b78b29"
     },
     {
       "path": "scripts/build_docs_manifest.py",
@@ -590,8 +645,8 @@
     },
     {
       "path": "src/kompiler/adapters/builtin.py",
-      "bytes": 5973,
-      "sha256": "74831569eb5e77a8f7942a8f4aa84c24b6b8fb6f54227c2e8447ddbd0f4a6ac9"
+      "bytes": 6093,
+      "sha256": "bb28b87c06438d1c56a235c8d015fcd0fbfdfdf8c763c8ca5e1920f3973e2380"
     },
     {
       "path": "src/kompiler/adapters/catho.py",
@@ -610,8 +665,8 @@
     },
     {
       "path": "src/kompiler/adapters/github_collection.py",
-      "bytes": 3847,
-      "sha256": "8aee6d7f8a24f01db7c394c8a3f3c85191ac903fbfdfb1b950fd7ead00b506d3"
+      "bytes": 3888,
+      "sha256": "b7f6cce9494e2ccd1fe222b2444658f83e3aaf920a4e6f51932f86cb947183fd"
     },
     {
       "path": "src/kompiler/adapters/homecare.py",
@@ -632,6 +687,11 @@
       "path": "src/kompiler/adapters/kristal_v10.py",
       "bytes": 11314,
       "sha256": "09df6c52dd0df151747703181d70c406f27d01f0f1d29009acbd8e109c6ba72b"
+    },
+    {
+      "path": "src/kompiler/adapters/kristal_v11.py",
+      "bytes": 17026,
+      "sha256": "0da141a5877f764004dd238e70e0a167abfa4489609325f8611d9809f69124bd"
     },
     {
       "path": "src/kompiler/adapters/kristal_v6.py",
@@ -750,13 +810,13 @@
     },
     {
       "path": "src/kompiler/github_collection.py",
-      "bytes": 18798,
-      "sha256": "ea848a32f196341a846987cd19db09e7bae483e641bedbbf8959d1f0f773903b"
+      "bytes": 19025,
+      "sha256": "55c436c0214de80fa8a9ba7b6d74d526587b5b7a64e631f026cfae72bd61a186"
     },
     {
       "path": "src/kompiler/kristal-standard.lock.json",
-      "bytes": 1860,
-      "sha256": "246b362f44d71e282490f871ea9562ed9f59550d790c6ba47e79dffe0f179bc7"
+      "bytes": 2050,
+      "sha256": "d17a7a90f442fb296b1266f686f6ac4723a8681a7af6d1b63f82e80cabfa9969"
     },
     {
       "path": "src/kompiler/kristal_standard.py",
@@ -860,8 +920,8 @@
     },
     {
       "path": "src/kompiler/runtime.py",
-      "bytes": 6841,
-      "sha256": "a87928bc122613ff26bdc90d96492419c450d510000eb4b93756d67c2fc8f9c4"
+      "bytes": 7300,
+      "sha256": "3d1fef951778921819a1ca42023fc7b67f8ff68d0c02426086177b288d5204b9"
     },
     {
       "path": "src/kompiler/storage/__init__.py",
@@ -914,6 +974,21 @@
       "sha256": "f46830bf11fbe59045d290e8fb3b4983d25f2d3c2e5f4fd81f41ea29d993a5d7"
     },
     {
+      "path": "tests/integration/test_c5_framework_pin.py",
+      "bytes": 2375,
+      "sha256": "163a892654ec157fc7ff655f695d109c2b3fd41f7b88df334c2ca19b8f03b484"
+    },
+    {
+      "path": "tests/integration/test_c5_zoology_local.py",
+      "bytes": 2538,
+      "sha256": "0a81e1f48c1327a74e4a2ac81302c5d6a50dc74d1bec24d5e59ce9f46e48aa20"
+    },
+    {
+      "path": "tests/integration/test_c5_zoology_read_surface.py",
+      "bytes": 5932,
+      "sha256": "eff6a7cf46aa8f5c0c6661c31c84e1c65147284697c92886ae56270fc497b2ec"
+    },
+    {
       "path": "tests/integration/test_github_collection.py",
       "bytes": 11564,
       "sha256": "8d67b8087d48ba5fa1c68ebb31c37c78cebf7314d46d11deeba5451978438c69"
@@ -952,6 +1027,21 @@
       "path": "tests/integration/test_v10_publication.py",
       "bytes": 1380,
       "sha256": "cfabacba992a675a71cb7c9ea4b405962a0357c70790a6812ed563b8e7fe4bd5"
+    },
+    {
+      "path": "tests/integration/test_v11_derived_context.py",
+      "bytes": 11275,
+      "sha256": "ea17f6bf081a5e413c3449add1ab2a925797514d3fbcc8468b26eab48c4207f4"
+    },
+    {
+      "path": "tests/test_local_patch.py",
+      "bytes": 2468,
+      "sha256": "49308b63cb1a364267b826c218abf70b4543778fb90fc7c7343a4d1898a91123"
+    },
+    {
+      "path": "tests/test_v10_provenance_metadata.py",
+      "bytes": 3047,
+      "sha256": "4605bc189c22cd3fc3a2f2b44c85c12712f4e4c9ce6df4147c418dde5a894811"
     },
     {
       "path": "tests/unit/test_discovery.py",

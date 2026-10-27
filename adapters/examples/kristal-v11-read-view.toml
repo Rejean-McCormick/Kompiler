@@ -1,0 +1,21 @@
+# Copy outside the repository and edit the exact paths. Private by default.
+# Never point this at an unapproved or publicly exposed Kristal workspace.
+id = "kristal-v11-local"
+version = "0.1.0"
+target_id = "KristalV11:ExplicitLocalExample"
+kind = "kristal"
+
+[source]
+root = "C:/mycode/Kristal-Framework/examples/v11"
+
+[implementation]
+type = "kristal-v11-read-view"
+
+[implementation.options]
+local_read_approved = true
+framework_root = "C:/mycode/Kristal-Framework"
+integration_pack_root = "C:/mycode/Kristal-Integration-Pack"
+registry = "identity-registry.example.json"
+graph = "semantic-graph.example.json"
+crosswalk = "external-crosswalk.example.json"
+catalog = "dictionaries/catalog.json"

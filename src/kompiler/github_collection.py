@@ -219,7 +219,7 @@ class CollectionReader:
     def catalog(self, *, query: str = "", limit: int = 100, offset: int = 0) -> dict[str, Any]:
         term = query.casefold().strip()
         rows = [x for x in self.entries if not term or term in str(x.get("title") or "").casefold() or term in x["slug"].casefold() or term in x["state_ref"].casefold()]
-        return {"repository": self.source_uri, "count": len(rows), "entries": rows[max(0, offset):max(0, offset) + min(200, max(1, limit))], "index_digest": self.index["index_digest"]}
+        return {"repository": self.source_uri, "source_revision": self.revision, "count": len(rows), "entries": rows[max(0, offset):max(0, offset) + min(200, max(1, limit))], "index_digest": self.index["index_digest"]}
 
     def manifest(self, slug: str) -> dict[str, Any]:
         entry = self._by_slug.get(slug)
@@ -292,8 +292,8 @@ class CollectionReader:
             txt = data.decode("utf-8")
         except UnicodeDecodeError as exc:
             raise AdapterError("NON_TEXT_RESOURCE", "Resource is not UTF-8 text") from exc
-        return {"slug": slug, "path": rel, "github_path": f"kristals/{slug}/{rel}", "content": txt, "sha256": _sha(data), "state_ref": manifest["state_ref"], "surface_digest": manifest["surface_digest"], "source": self.source_uri}
+        return {"slug": slug, "path": rel, "github_path": f"kristals/{slug}/{rel}", "content": txt, "sha256": _sha(data), "state_ref": manifest["state_ref"], "surface_digest": manifest["surface_digest"], "state_logical_commitment": manifest["state_logical_commitment"], "source_revision": self.revision, "source": self.source_uri}
 
     def reading_map(self, slug: str, *, limit: int = 100) -> dict[str, Any]:
         m = self.manifest(slug)
-        return {"slug": slug, "state_ref": m["state_ref"], "surface_digest": m["surface_digest"], "entrypoint": f"kristals/{slug}/AI_START_HERE.md", "files": m["files"][:min(500, max(1, limit))], "file_count": m["file_count"], "materialization_object_count": m["materialization_object_count"], "source": self.source_uri}
+        return {"slug": slug, "state_ref": m["state_ref"], "surface_digest": m["surface_digest"], "state_logical_commitment": m["state_logical_commitment"], "source_revision": self.revision, "entrypoint": f"kristals/{slug}/AI_START_HERE.md", "files": m["files"][:min(500, max(1, limit))], "file_count": m["file_count"], "materialization_object_count": m["materialization_object_count"], "source": self.source_uri}

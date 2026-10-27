@@ -33,7 +33,7 @@ class GithubCollectionAdapter(Adapter):
         )
 
     def health(self) -> dict[str, Any]:
-        return {"ok": True, "adapter_id": self.adapter_id, "target_id": self.target_id, "source": self.reader.source_uri, "collection_count": len(self.reader.entries), "index_digest": self.reader.index["index_digest"], "network": self.reader.is_network}
+        return {"ok": True, "adapter_id": self.adapter_id, "target_id": self.target_id, "source": self.reader.source_uri, "collection_count": len(self.reader.entries), "index_digest": self.reader.index["index_digest"], "source_revision": self.reader.revision, "network": self.reader.is_network}
 
     def capabilities(self) -> list[OperationCapability]:
         net = self.reader.is_network

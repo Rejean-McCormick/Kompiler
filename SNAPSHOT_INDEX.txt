@@ -1,22 +1,9 @@
-Kompiler snapshot file index
-Version: 0.7.0-alpha.2
-Files included: 198
+ZmartZnap snapshot file index
+Files included: 216
 
 .github/ISSUE_TEMPLATE/bug.md
 .github/workflows/ci.yml
 .gitignore
-CHANGELOG.md
-CONTRIBUTING.md
-GitSink.bat
-Kompiler.pyw
-LICENSE
-Makefile
-README.md
-REPO_MANIFEST.json
-SECURITY.md
-SNAPSHOT_INDEX.txt
-SmartSnap.pyw
-VERSION
 adapters/examples/catho.toml
 adapters/examples/foodbrands.toml
 adapters/examples/homecare.toml
@@ -30,18 +17,21 @@ adapters/examples/power.toml
 adapters/examples/recipes.toml
 adapters/examples/scolqc.toml
 adapters/examples/vehiclediag.toml
+CHANGELOG.md
 config/kompiler.example.toml
+CONTRIBUTING.md
 desktop/index.html
 desktop/package.json
-desktop/src/main.tsx
-desktop/src/styles.css
-desktop/src-tauri/Cargo.toml
 desktop/src-tauri/build.rs
+desktop/src-tauri/Cargo.toml
 desktop/src-tauri/src/main.rs
 desktop/src-tauri/tauri.conf.json
+desktop/src/main.tsx
+desktop/src/styles.css
 desktop/tsconfig.app.json
 desktop/tsconfig.json
 desktop/vite.config.ts
+docs-manifest.json
 docs/00-overview/principles.md
 docs/00-overview/terminology.md
 docs/00-overview/vision.md
@@ -59,8 +49,10 @@ docs/02-protocol/query-contract.md
 docs/02-protocol/v7-surface-contract.md
 docs/03-runtime/adapter-contract.md
 docs/03-runtime/budgeting-ranking.md
+docs/03-runtime/c5-zoology-qualification.md
 docs/03-runtime/context-compiler.md
 docs/03-runtime/execution-engine.md
+docs/03-runtime/github-collection-reader.md
 docs/03-runtime/kristal-integration.md
 docs/03-runtime/kristal-v9.md
 docs/03-runtime/kristall-v7.md
@@ -97,23 +89,34 @@ docs/ADR/0006-ecosystem-authority-boundaries.md
 docs/ADR/README.md
 docs/INVENTORY.md
 docs/README.md
-docs-manifest.json
+docs/v10-alignment-update.md
 examples/capabilities/example.json
 examples/queries/education.json
 examples/queries/kristall-surface.json
 examples/queries/pollution.json
 examples/queries/recipes.json
+GitSink.bat
+Kompiler.pyw
 kristal-v10.integration.json
+Launch_MULTiSmartDump.lnk
+LICENSE
+Makefile
 pyproject.toml
+README.md
+REPO_MANIFEST.json
 schemas/kompiler-capabilities.schema.json
 schemas/kompiler-context-pack.schema.json
 schemas/kompiler-error.schema.json
 schemas/kompiler-query.schema.json
+scripts/apply_update.py
 scripts/build_docs_manifest.py
 scripts/build_manifest.py
 scripts/build_release.py
 scripts/check_contract_ownership.py
 scripts/export_schemas.py
+SECURITY.md
+SHA256SUMS.txt
+SmartSnap.pyw
 src/kompiler/__init__.py
 src/kompiler/__main__.py
 src/kompiler/adapters/__init__.py
@@ -122,6 +125,7 @@ src/kompiler/adapters/builtin.py
 src/kompiler/adapters/catho.py
 src/kompiler/adapters/common.py
 src/kompiler/adapters/foodbrands.py
+src/kompiler/adapters/github_collection.py
 src/kompiler/adapters/homecare.py
 src/kompiler/adapters/hospitalops.py
 src/kompiler/adapters/humanbody.py
@@ -149,6 +153,7 @@ src/kompiler/config.py
 src/kompiler/errors.py
 src/kompiler/executor/__init__.py
 src/kompiler/executor/engine.py
+src/kompiler/github_collection.py
 src/kompiler/kristal-standard.lock.json
 src/kompiler/kristal_standard.py
 src/kompiler/kristall/__init__.py
@@ -181,12 +186,19 @@ tests/fixtures/kristal-jcs/expected-hashes.txt
 tests/fixtures/kristal-jcs/vectors.json
 tests/fixtures/mock_adapter.py
 tests/integration/test_api.py
+tests/integration/test_c5_framework_pin.py
+tests/integration/test_c5_zoology_local.py
+tests/integration/test_c5_zoology_read_surface.py
+tests/integration/test_github_collection.py
+tests/integration/test_github_reader_hardening.py
 tests/integration/test_hardening.py
 tests/integration/test_kristall_v7.py
 tests/integration/test_local_kit_32.py
 tests/integration/test_runtime.py
 tests/integration/test_subprocess.py
 tests/integration/test_v10_publication.py
+tests/test_local_patch.py
+tests/test_v10_provenance_metadata.py
 tests/unit/test_discovery.py
 tests/unit/test_ecosystem_boundaries.py
 tests/unit/test_jcs.py
@@ -197,6 +209,13 @@ tests/unit/test_policy.py
 tests/unit/test_protocol_hash.py
 tests/unit/test_protocol_validation.py
 tests/unit/test_security.py
+tests/unit/test_selection_profiles.py
 tests/unit/test_selector.py
 tests/unit/test_source_identity.py
 tests/unit/test_standard_dependency.py
+VALIDATION_REPORT.md
+VERSION
+WINDOWS_UPGRADE.md
+ZmartZnap.pyw
+
+Index file: SNAPSHOT_INDEX.txt

@@ -15,6 +15,7 @@ from .kristal_v6 import KristalV6StateAdapter, find_v6_state, target_id_for_stat
 from .kristal_v9 import KristalV9StateAdapter, find_v9_state, target_id_for_v9
 from .github_collection import GithubCollectionAdapter
 from .kristal_v10 import KristalV10PublicationAdapter, find_v10_publication, target_id_for_v10
+from .kristal_v11 import KristalV11ReadViewAdapter
 from kompiler.kristall import find_kristall_manifest
 from .math import MathAdapter
 from .power import PowerAdapter
@@ -42,6 +43,7 @@ BUILTIN_FACTORIES: dict[str, Callable[[AdapterManifest], Adapter]] = {
     "kristal-v9-state": lambda m: KristalV9StateAdapter(_root_from_manifest(m), target_id=m.target_id),
     "kristal-github-collection": lambda m: GithubCollectionAdapter(_root_from_manifest(m), target_id=m.target_id),
     "kristal-v10-publication": lambda m: KristalV10PublicationAdapter(_root_from_manifest(m), target_id=m.target_id),
+    "kristal-v11-read-view": lambda m: KristalV11ReadViewAdapter(m),
 }
 
 

@@ -33,6 +33,11 @@ class KompilerRuntime:
         config=load_config(config_path)
         configure_standard_root(config.standard.root, config.standard.contract_set_sha256)
         registry=AdapterRegistry.from_manifests(config.adapter_manifests)
+        # Opt-in v11 sources are not public read surfaces. Never expose them on a
+        # non-loopback API, even if another configuration enables remote access.
+        if any(a.adapter_id == "kristal-v11-read-view" for a in registry.adapters()):
+            if config.api.enabled and config.api.host not in {"127.0.0.1", "::1", "localhost"}:
+                raise AdmissionError("V11_LOCAL_ONLY", "v11 local reader cannot be served on a non-loopback API")
         # Optional convenience roots: explicit env opt-in; detection does not execute source scripts.
         roots=os.getenv("KOMPILER_KRISTAL_ROOTS","")
         discover_roots=[Path(x) for x in roots.split(os.pathsep) if x]

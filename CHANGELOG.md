@@ -1,3 +1,11 @@
+## 0.8.0-alpha.1 + local Framework v11 reader candidate — 2026-10-27
+
+- Added opt-in, local-only derived Context Pack adapter for Framework v11 draft.4 via exactly pinned Integration Pack 0.3.0-alpha.1.
+- Preserved KQ/KP/KA/KS identities, lexical direct/fallback/missing, typed literals and KS provenance; no publication or canonical conversion.
+- Guarded external Framework/Pack scripts and added local-only HTTP binding gate with adversarial tests.
+- Integrated the snapshot's previously un-applied v10 GitHub read-provenance metadata patch so its existing tests now exercise the code.
+- Original semantic version remains 0.8.0-alpha.1; these changes are a review candidate, not a production release.
+
 # Changelog
 
 ## 0.8.0-alpha.1 — 2026-10-08
