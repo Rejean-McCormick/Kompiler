@@ -16,3 +16,5 @@ node_modules/
 desktop/dist/
 desktop/src-tauri/target/
 .DS_Store
+ZmartZnap.pyw
+GitSink.bat
