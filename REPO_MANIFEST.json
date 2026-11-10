@@ -1,7 +1,7 @@
 {
   "schema": "kompiler.repo-manifest/1.0",
   "version": "0.8.0-alpha.1",
-  "file_count": 222,
+  "file_count": 223,
   "files": [
     {
       "path": ".github/ISSUE_TEMPLATE/bug.md",
@@ -15,8 +15,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 199,
-      "sha256": "41a9169b324ad8624eee4f44c3f02c3c5b447fe90fd4ab5d393d00aad4b237ec"
+      "bytes": 225,
+      "sha256": "04ae646a3f804e3043ade3116979927db396fb5b584802d7966cf0fa1045e726"
     },
     {
       "path": "CHANGELOG.md",
@@ -27,11 +27,6 @@
       "path": "CONTRIBUTING.md",
       "bytes": 931,
       "sha256": "cfb4bbc0d7043e08903ff6c6035597d179323f9571f8751fbabe13ba72682c8a"
-    },
-    {
-      "path": "GitSink.bat",
-      "bytes": 1863,
-      "sha256": "26c1bd8e8c7dc4d8adb1fe6da128b020ffbb7d90d54ad402ce3e64f2ce10b109"
     },
     {
       "path": "Kompiler.pyw",
@@ -55,8 +50,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2579,
-      "sha256": "fdfb62163b9c886de10b50c6e33149ed796cd676bab73719dc8dec84d32ac949"
+      "bytes": 2844,
+      "sha256": "6f642b98acb90d24c4ef9ef3b42f623b29f62309905106c47a49575a093da76e"
     },
     {
       "path": "SECURITY.md",
@@ -67,6 +62,11 @@
       "path": "SHA256SUMS.txt",
       "bytes": 457,
       "sha256": "e21c2c04a56212329ab62b611a50f3f8256936586fcdb838230c4b1f2c04323a"
+    },
+    {
+      "path": "SMARTDUMP_INDEX.txt",
+      "bytes": 9804,
+      "sha256": "0c5ce8bac4d89e549cde60473f33a45a72a3708619645ab3130eda40a878eae5"
     },
     {
       "path": "SNAPSHOT_INDEX.txt",
@@ -92,11 +92,6 @@
       "path": "WINDOWS_UPGRADE.md",
       "bytes": 1714,
       "sha256": "dae78312632ca01917f8b4eea743b676b9f2ea1844743dd34849a1ef0a5f1ee5"
-    },
-    {
-      "path": "ZmartZnap.pyw",
-      "bytes": 22889,
-      "sha256": "70775b94ff616ed9efdb3d6b989639fa3cd22a250f1389fec485791d161df1ea"
     },
     {
       "path": "adapters/examples/catho.toml",
@@ -307,6 +302,11 @@
       "path": "docs/03-runtime/adapter-contract.md",
       "bytes": 2530,
       "sha256": "8df3a8ab23f55e66c27a5758928fc5d160dd6860582ad889ddd5737183d8aa4f"
+    },
+    {
+      "path": "docs/03-runtime/branch04-cross-reader-acceptance.md",
+      "bytes": 1295,
+      "sha256": "03868be95fa3f51307de03a20f88405ff57172ab9cfb8d71ccbb3e590ff263cd"
     },
     {
       "path": "docs/03-runtime/budgeting-ranking.md",
@@ -1027,6 +1027,11 @@
       "path": "tests/integration/test_v10_publication.py",
       "bytes": 1380,
       "sha256": "cfabacba992a675a71cb7c9ea4b405962a0357c70790a6812ed563b8e7fe4bd5"
+    },
+    {
+      "path": "tests/integration/test_v11_cross_reader_preflight.py",
+      "bytes": 3817,
+      "sha256": "9324b184b5ddcda4d3be069fd7d5ebd7abb7c8047bdc727e58e871ba8ed773b7"
     },
     {
       "path": "tests/integration/test_v11_derived_context.py",

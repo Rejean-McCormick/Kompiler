@@ -30,3 +30,7 @@ python -m ruff check src tests
 ```
 
 Supported runtime: Python 3.12+; Framework and Pack must be installed separately, never vendored into this repository. CI qualification of historical v10 features requiring an external Framework remains conditional. No GitHub, VPS, canonical source, `D:` evidence or public library was changed by this update.
+
+## Branch 04 functional-chain alignment
+
+See [final-system reader/language boundaries](docs/03-runtime/branch04-cross-reader-acceptance.md). This is a pinned-snapshot coordination note and does not override owner normative contracts or qualify public publication.
