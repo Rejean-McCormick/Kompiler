@@ -5,7 +5,9 @@ import json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-EXCLUDE={"REPO_MANIFEST.json","uv.lock"}
+# SMARTDUMP_INDEX.txt is generated anew by the capture tool and is not a release input.
+# Historical SNAPSHOT_INDEX.txt remains included in the repository manifest.
+EXCLUDE={"REPO_MANIFEST.json","uv.lock","SMARTDUMP_INDEX.txt"}
 EXCLUDE_PARTS={".git",".venv","__pycache__",".pytest_cache","node_modules","target","dist"}
 rows=[]
 for p in sorted(ROOT.rglob("*")):

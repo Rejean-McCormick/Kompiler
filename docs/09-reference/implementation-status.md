@@ -18,9 +18,23 @@ Implemented:
 - **Local Kit 3.2 workspace discovery** from `build/v9`, optional `state/` mirror and exact release directories;
 - Local Kit logical-artifact reads from `build/v9/artifacts/`;
 - v10 Publication Bundle verification/reader;
+- **opt-in Framework v11 local derived-context reader** (`kristal-v11-read-view`) using exact Framework `11.0.0-draft.4` and Integration Pack `0.3.0-alpha.1` pins, with a trusted explicit local manifest, selected KQ/KP/KA/KS IDs, checked source/view hashes and lexical status preserved;
 - optional Kristal Manager catalog discovery;
 - Windows `Kompiler.pyw` control panel;
 - ownership check preventing normative Kristal schemas from being re-vendored.
+
+## v11 reader qualification limits
+
+The v11 adapter is a **candidate local read-only projection**, not a normative implementation of Framework v11 or a certified public reader. It is not auto-discovered: the operator configures an explicit `adapters.v11.manifest` with `local_read_approved = true` and a loopback API. It validates the exact pinned Framework and Integration Pack source set; it cannot authorize disclosure, create canonical identities, write, publish, or activate a Kristal. Do not infer a missing lexical translation or external identity from a crosswalk. See [v11 derived context operations](../03-runtime/kristal-v11-derived-context.md).
+
+For cross-repository v11 validation, supply real reviewed local checkouts and execute:
+
+```bash
+KOMPILER_V11_FRAMEWORK_ROOT=/path/to/Framework KOMPILER_V11_PACK_ROOT=/path/to/Pack \
+  python -m pytest tests/integration/test_v11_derived_context.py -v
+```
+
+Without these exact local checkouts, the cross-repository cases are skipped; passing the remaining tests does not qualify a production or public reader.
 
 ## Deliberately not owned
 

@@ -1,7 +1,7 @@
 {
   "schema": "kompiler.repo-manifest/1.0",
   "version": "0.8.0-alpha.1",
-  "file_count": 223,
+  "file_count": 226,
   "files": [
     {
       "path": ".github/ISSUE_TEMPLATE/bug.md",
@@ -17,6 +17,11 @@
       "path": ".gitignore",
       "bytes": 225,
       "sha256": "04ae646a3f804e3043ade3116979927db396fb5b584802d7966cf0fa1045e726"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1154,
+      "sha256": "a6c1d7d7803c2da805a339e7a87cc6648d2a0e9a299c1e4aa452eb86c906848e"
     },
     {
       "path": "CHANGELOG.md",
@@ -62,11 +67,6 @@
       "path": "SHA256SUMS.txt",
       "bytes": 457,
       "sha256": "e21c2c04a56212329ab62b611a50f3f8256936586fcdb838230c4b1f2c04323a"
-    },
-    {
-      "path": "SMARTDUMP_INDEX.txt",
-      "bytes": 9804,
-      "sha256": "0c5ce8bac4d89e549cde60473f33a45a72a3708619645ab3130eda40a878eae5"
     },
     {
       "path": "SNAPSHOT_INDEX.txt",
@@ -470,8 +470,8 @@
     },
     {
       "path": "docs/09-reference/implementation-status.md",
-      "bytes": 2670,
-      "sha256": "ed2f8c137a3fc5a930faa457d3d96f7e65b5a9dc47933c11edec0a354f37b076"
+      "bytes": 4024,
+      "sha256": "37c367f31ba1b0a13d8471b6802455e545af7c24287234e27ca556aedfa69ab1"
     },
     {
       "path": "docs/09-reference/operator-workflow.md",
@@ -529,14 +529,29 @@
       "sha256": "e5b505aa183df01cb84cad68b2580f226ec277dbf8ab1bc3061a1a8458496a60"
     },
     {
+      "path": "docs/ai/AI_CONTEXT.md",
+      "bytes": 2648,
+      "sha256": "57d4e82550761826b4a6effc152ec878141feb9b443d47f166e32cb01c2d6eb1"
+    },
+    {
+      "path": "docs/ai/INDEX.md",
+      "bytes": 2330,
+      "sha256": "c9487e42f099eb6c67a889ddba85e19e5db5b7201a4fd349e252c46b330b2612"
+    },
+    {
+      "path": "docs/ai/OPERATIONS.md",
+      "bytes": 1681,
+      "sha256": "7f8c395574a850c1ab8e999c80f8b71434f90179b8aacaac48807f4c5cc76a23"
+    },
+    {
       "path": "docs/v10-alignment-update.md",
       "bytes": 4251,
       "sha256": "1d294b39bd69c77a7c8082992519072f4ffa9a849cdea6277e5c2e836c7a99c8"
     },
     {
       "path": "docs-manifest.json",
-      "bytes": 10475,
-      "sha256": "95fcc0499ea37de7f4ca969eefc8a77051f841716627681bbd58bc933d836252"
+      "bytes": 11124,
+      "sha256": "da68fb0b67bf50b71a6694f575ed06794c9957f33d5cd52b3261378c895da511"
     },
     {
       "path": "examples/capabilities/example.json",
@@ -605,8 +620,8 @@
     },
     {
       "path": "scripts/build_manifest.py",
-      "bytes": 898,
-      "sha256": "cade85c0752c55f08d5186d11ef7ef1f7b7fa9abc77b209348a1ca335ec637d4"
+      "bytes": 1085,
+      "sha256": "a17d92c266c30bec8d87a0acbfe399aa2e6ffd700a259f91dd738f9b78bde220"
     },
     {
       "path": "scripts/build_release.py",

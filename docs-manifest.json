@@ -1,6 +1,6 @@
 {
   "schema": "kompiler.docs-manifest/1.0",
-  "count": 61,
+  "count": 65,
   "files": [
     {
       "path": "docs/00-overview/principles.md",
@@ -81,6 +81,11 @@
       "path": "docs/03-runtime/adapter-contract.md",
       "sha256": "8df3a8ab23f55e66c27a5758928fc5d160dd6860582ad889ddd5737183d8aa4f",
       "bytes": 2530
+    },
+    {
+      "path": "docs/03-runtime/branch04-cross-reader-acceptance.md",
+      "sha256": "03868be95fa3f51307de03a20f88405ff57172ab9cfb8d71ccbb3e590ff263cd",
+      "bytes": 1295
     },
     {
       "path": "docs/03-runtime/budgeting-ranking.md",
@@ -244,8 +249,8 @@
     },
     {
       "path": "docs/09-reference/implementation-status.md",
-      "sha256": "ed2f8c137a3fc5a930faa457d3d96f7e65b5a9dc47933c11edec0a354f37b076",
-      "bytes": 2670
+      "sha256": "37c367f31ba1b0a13d8471b6802455e545af7c24287234e27ca556aedfa69ab1",
+      "bytes": 4024
     },
     {
       "path": "docs/09-reference/operator-workflow.md",
@@ -301,6 +306,21 @@
       "path": "docs/VALIDATION_KOMPILER_V11_LOCAL_2026_10_27.md",
       "sha256": "e5b505aa183df01cb84cad68b2580f226ec277dbf8ab1bc3061a1a8458496a60",
       "bytes": 3228
+    },
+    {
+      "path": "docs/ai/AI_CONTEXT.md",
+      "sha256": "57d4e82550761826b4a6effc152ec878141feb9b443d47f166e32cb01c2d6eb1",
+      "bytes": 2648
+    },
+    {
+      "path": "docs/ai/INDEX.md",
+      "sha256": "c9487e42f099eb6c67a889ddba85e19e5db5b7201a4fd349e252c46b330b2612",
+      "bytes": 2330
+    },
+    {
+      "path": "docs/ai/OPERATIONS.md",
+      "sha256": "7f8c395574a850c1ab8e999c80f8b71434f90179b8aacaac48807f4c5cc76a23",
+      "bytes": 1681
     },
     {
       "path": "docs/v10-alignment-update.md",
