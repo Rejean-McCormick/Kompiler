@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import uuid
+from contextlib import asynccontextmanager
 from typing import Any
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Query, status
@@ -47,8 +48,20 @@ class RunManager:
 def create_app(runtime: KompilerRuntime | None = None) -> FastAPI:
     runtime=runtime or KompilerRuntime.create()
     manager=RunManager(runtime)
-    app=FastAPI(title="Kompiler Local API",version="1.1",docs_url="/docs",redoc_url=None)
-    app.add_event_handler("shutdown", runtime.close)
+    @asynccontextmanager
+    async def lifespan(_app: FastAPI):
+        try:
+            yield
+        finally:
+            runtime.close()
+
+    app = FastAPI(
+        title="Kompiler Local API",
+        version="1.1",
+        docs_url="/docs",
+        redoc_url=None,
+        lifespan=lifespan,
+    )
     if runtime.config.api.cors_origins:
         app.add_middleware(CORSMiddleware, allow_origins=runtime.config.api.cors_origins, allow_credentials=False, allow_methods=["GET","POST"], allow_headers=["Authorization","Content-Type"])
 
